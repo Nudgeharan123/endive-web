@@ -10,7 +10,7 @@ Endive Limited's company page and email forwarder, both Workers on the Endive Cl
 ## Deploy
 
 - **Site:** automatic. Cloudflare Workers Builds is connected to this repo (27 Oct 2026): every push to `main` runs
-  `npx wrangler deploy` in `site/` and updates `endive.ie` and `www.endive.ie`. Previews for other branches are off.
+  `npx wrangler deploy` in `site/` and updates `endive.ie` and `www.endive.ie`. Other branches only upload preview versions, and Preview URLs are off, so nothing but `main` reaches the domains.
 - **Email forwarder:** by hand only, never on push, because it carries the founders' mail. From `email-forwarder/`:
   `npx wrangler login` as a member of the Endive account, then `npx wrangler deploy`. Send a test email to
   hello@endive.ie and admin@endive.ie straight after.
