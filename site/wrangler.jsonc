@@ -1,0 +1,21 @@
+// Endive company page: a static-assets Worker on the Endive Cloudflare account.
+// Replaces Mark's interim page, which runs under the same Worker name.
+{
+  // ---------- Worker ----------
+  "name": "endive-website",
+  "compatibility_date": "2026-10-27",
+  "account_id": "52e65a2366c205fa0ea36ef06adf6262",
+
+  // ---------- Static files ----------
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+
+  // ---------- Domains ----------
+  // Check against the live Worker's Domains & Routes tab before the first deploy.
+  "routes": [
+    { "pattern": "endive.ie", "custom_domain": true },
+    { "pattern": "www.endive.ie", "custom_domain": true }
+  ]
+}
